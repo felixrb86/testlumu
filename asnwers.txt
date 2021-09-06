@@ -5,7 +5,14 @@ GENERAL QUESTIONS
 - database health (service, storage, memory)
 For this part we can use PRTG monitor, Prometheus and Grafana
 
+2. find /dir/ -type f -atime +20 ! -atime +30 -delete
 
+find: command to search 
+/dir/: directory
+-type f: file type
+-atime +20: accessed more than 20 days ago
+-atime +20: accessed less than 30 days ago
+-delete: allow to delete the files
 
 
 
