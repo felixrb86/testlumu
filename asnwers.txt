@@ -14,7 +14,11 @@ find: command to search
 -atime +20: accessed less than 30 days ago
 -delete: allow to delete the files
 
+PRACTICAL SCENARIO
 
+1. The files in /app
+
+2. 
 
 
 

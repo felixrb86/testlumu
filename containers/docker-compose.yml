@@ -1,0 +1,16 @@
+version: "3.9" 
+services:
+  app-exec:
+    build: .
+    logging:
+        options:
+            max-size: 1m
+    ports:
+      - "80:80"
+    volumes:
+      - files:/var/www/html/files
+  #app-nginx:
+    #build: ./build/DockerFileNginx
+volumes:
+  files:
+    external: true
