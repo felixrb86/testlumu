@@ -1,5 +1,5 @@
 <?php
-    echo "Hola 1"; die();
+    echo "Hola 2"; die();
     $num_files = rand(10,20);
 
     $file_dir = "./files/";

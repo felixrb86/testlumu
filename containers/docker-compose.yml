@@ -1,16 +1,20 @@
 version: "3.9" 
 services:
   app-exec:
-    build: .
+    build: ./app-exec/
+    container_name: app-exec
     logging:
         options:
-            max-size: 1m
+            max-size: 100m
     ports:
       - "80:80"
     volumes:
       - files:/var/www/html/files
+    restart: always
   #app-nginx:
-    #build: ./build/DockerFileNginx
+    #build: ./app-ngin/
+    #container_name: app-nginx
+    #restart: always
 volumes:
   files:
-    external: true
+    #external: true
