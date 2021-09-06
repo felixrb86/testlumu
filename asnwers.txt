@@ -1,0 +1,16 @@
+GENERAL QUESTIONS
+
+1. The most critical metrics to monitored
+- services http and kafka
+- database health (service, storage, memory)
+For this part we can use PRTG monitor, Prometheus and Grafana
+
+
+
+
+
+
+
+
+
+
