@@ -1,14 +1,17 @@
 <?php
-    echo "Hola 1"; die();
+
     $num_files = rand(10,20);
 
     $file_dir = "./files/";
+
+    if (!file_exists($file_dir)) {
+        mkdir($file_dir, 0774, true);
+    }
 
     $n = 1;
 
     $string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN';
 
-    $size = 0;
     $bytes = 0;
 
     while ($n <= $num_files )
@@ -23,7 +26,6 @@
         
         fwrite($file, $file_data);
         
-        $size =+ strlen($file_data);
         $bytes =+ filesize($file_name);
 
         fclose($file);   
@@ -31,7 +33,7 @@
         $n++;
     }
     
-    echo "# Files: $num_files <br> Sizes: $size <br> Bytes Written: $bytes"
+    echo "# Files: $num_files <br> Bytes Written: $bytes"
 
 
 ?>

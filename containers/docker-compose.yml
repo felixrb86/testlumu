@@ -5,16 +5,19 @@ services:
     container_name: app-exec
     logging:
         options:
-            max-size: 100m
+            max-size: 200m
+    #ports:
+    #  - "80:80"
+    volumes:
+      - files:/var/www/html/files
+    restart: unless-stopped
+  app-nginx:
+    build: ./app-nginx/
+    container_name: app-nginx
+    restart: unless-stopped
     ports:
       - "80:80"
     volumes:
-      - files:/var/www/html/files
-    restart: always
-  #app-nginx:
-    #build: ./app-ngin/
-    #container_name: app-nginx
-    #restart: always
+      - files:/usr/share/nginx/html
 volumes:
   files:
-    #external: true
