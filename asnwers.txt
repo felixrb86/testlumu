@@ -19,9 +19,3 @@ PRACTICAL SCENARIO
 1. The files in /app
 
 2. The files in /containers
-
-
-
-
-
-
